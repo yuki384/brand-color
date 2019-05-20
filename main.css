@@ -3,12 +3,13 @@
 }
 .one{
   float: left;
-  padding: 24px 1.5vw;
+  padding: 3vw 1.5vw;
   margin: .5vw;
   width: 10vw;
   text-align: center;
   border-radius: .5vw;
   color:#fff;
+  cursor: pointer;
 }
 p{
   margin: 0;
