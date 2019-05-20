@@ -9,12 +9,26 @@
     <div class="main">
       <div class="one" id="#1DA1F2">
         <p class="name">Twitter</p>
+        <p class="color">#1DA1F2</p>
       </div>
     </div>
     <script type="text/javascript">
       var backgrounds = document.getElementsByClassName('one');
-      for (var i=0; i<backgrounds.length; i++){
+      for (let i=0; i<backgrounds.length; i++){
         backgrounds[i].style.backgroundColor=backgrounds[i].id;
+      }
+      for(let i = 0; i < backgrounds.length; i++){
+        backgrounds[i].addEventListener("click",() => {
+          var text = document.getElementById(backgrounds[i].id);
+          text=text.lastElementChild;
+          var selection = window.getSelection();
+          var range = document.createRange();
+          range.selectNodeContents(text);
+          selection.removeAllRanges();
+          selection.addRange(range);
+          document.execCommand('copy');
+          selection.removeAllRanges();
+        }, false);
       }
     </script>
   </body>
