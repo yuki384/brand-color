@@ -60,6 +60,8 @@
           selection.addRange(range);
           document.execCommand('copy');
           selection.removeAllRanges();
+          text.parentNode.classList.add( "copied" ) ;
+          setTimeout('for(let j=0; j<document.getElementsByClassName("copied").length;j++){document.getElementsByClassName("copied")[j].classList.toggle( "copied" )}', 800);
         }, false);
       }
     </script>
