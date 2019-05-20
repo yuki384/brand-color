@@ -1,0 +1,15 @@
+.main{
+  padding: 5vh 14vw;
+}
+.one{
+  float: left;
+  padding: 24px 1.5vw;
+  margin: .5vw;
+  width: 10vw;
+  text-align: center;
+  border-radius: .5vw;
+  color:#fff;
+}
+p{
+  margin: 0;
+}
