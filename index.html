@@ -6,64 +6,9 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <div class="main">
-      <div class="one" id="#1DA1F2">
-        <p class="name">Twitter</p>
-        <p class="color">#1DA1F2</p>
-      </div>
-      <div class="one" id="#00bb00">
-        <p class="name">LINE</p>
-        <p class="color">#00bb00</p>
-      </div>
-      <div class="one" id="#3B5998">
-        <p class="name">Facebook</p>
-        <p class="color">#3B5998</p>
-      </div>
-      <div class="one" id="#BD081C">
-        <p class="name">Pinterest</p>
-        <p class="color">#BD081C</p>
-      </div>
-      <div class="one" id="#5ab90e">
-        <p class="name">Qiita</p>
-        <p class="color">#5ab90e</p>
-      </div>
-      <div class="one" id="#161515">
-        <p class="name">GitHub</p>
-        <p class="color">#161515</p>
-      </div>
-      <div class="one" id="#ff9933">
-        <p class="name">Cookpad</p>
-        <p class="color">#ff9933</p>
-      </div>
-      <div class="one" id="#7289da">
-        <p class="name">Discord</p>
-        <p class="color">#7289da</p>
-      </div>
-      <div class="one" id="#0078FF">
-        <p class="name">Messanger</p>
-        <p class="color">#0078FF</p>
-      </div>
+    <div id="main">
     </div>
-    <script type="text/javascript">
-      var backgrounds = document.getElementsByClassName('one');
-      for (let i=0; i<backgrounds.length; i++){
-        backgrounds[i].style.backgroundColor=backgrounds[i].id;
-      }
-      for(let i = 0; i < backgrounds.length; i++){
-        backgrounds[i].addEventListener("click",() => {
-          var text = document.getElementById(backgrounds[i].id);
-          text=text.lastElementChild;
-          var selection = window.getSelection();
-          var range = document.createRange();
-          range.selectNodeContents(text);
-          selection.removeAllRanges();
-          selection.addRange(range);
-          document.execCommand('copy');
-          selection.removeAllRanges();
-          text.parentNode.classList.add( "copied" ) ;
-          setTimeout('for(let j=0; j<document.getElementsByClassName("copied").length;j++){document.getElementsByClassName("copied")[j].classList.toggle( "copied" )}', 800);
-        }, false);
-      }
-    </script>
+    <script type="text/javascript" src="colors.json"></script>
+    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
